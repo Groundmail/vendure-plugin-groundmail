@@ -1,0 +1,64 @@
+{
+  "name": "vendure-plugin-groundmail",
+  "version": "0.1.0",
+  "description": "Vendure EmailPlugin sender for Groundmail: order confirmations, password resets and email verification over the Groundmail API",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Groundmail/vendure-plugin-groundmail.git"
+  },
+  "homepage": "https://docs.groundmail.dev/frameworks/vendure",
+  "bugs": {
+    "url": "https://github.com/Groundmail/vendure-plugin-groundmail/issues"
+  },
+  "keywords": [
+    "vendure",
+    "vendure-plugin",
+    "vendure-email",
+    "email-plugin",
+    "email-sender",
+    "ecommerce",
+    "email",
+    "transactional-email",
+    "groundmail"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "@vendure/email-plugin": "^2.0.0 || ^3.0.0"
+  },
+  "dependencies": {
+    "groundmail": ">=0.14.5 <1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@vendure/core": "3.8.2",
+    "@vendure/email-plugin": "3.8.2",
+    "tsup": "^8.5.0",
+    "typescript": "^5",
+    "vitest": "^3.2.4"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs --dts --target node20 --external groundmail --external @vendure/email-plugin --external @vendure/core --clean",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  }
+}
