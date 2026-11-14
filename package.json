@@ -1,6 +1,6 @@
 {
   "name": "vendure-plugin-groundmail",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Vendure EmailPlugin sender for Groundmail: order confirmations, password resets and email verification over the Groundmail API",
   "license": "MIT",
   "main": "./dist/index.js",

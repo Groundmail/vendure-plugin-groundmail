@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2 (2026-11-14)
+
+- README: "Why Groundmail" now covers agent mailboxes and how each kind of mail sends from its own IPs.
+
 ## 0.1.1 (2026-11-13)
 
 - The package now includes this changelog.
