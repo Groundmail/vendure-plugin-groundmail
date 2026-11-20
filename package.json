@@ -55,7 +55,7 @@
     "@vendure/email-plugin": "3.8.2",
     "tsup": "^8.5.0",
     "typescript": "^5",
-    "vitest": "^3.2.4"
+    "vitest": "^5.1.1"
   },
   "scripts": {
     "build": "tsup src/index.ts --format cjs --dts --target node20 --external groundmail --external @vendure/email-plugin --external @vendure/core --clean",
